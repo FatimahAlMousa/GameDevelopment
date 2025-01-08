@@ -8,7 +8,7 @@ public class PlayerMovement2 : MonoBehaviour
 
     public float speed = 1;
 
-    public float jumpForce = 300f; // Adjust to control jump height
+    public float jumpForce = 5; // Adjust to control jump height
     public Transform groundCheck; // Empty GameObject to check ground
     public LayerMask groundLayer; // LayerMask to specify the ground layer
 
@@ -24,12 +24,12 @@ public class PlayerMovement2 : MonoBehaviour
     void Update()
     {
         // Move Right
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0)
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             velocity = new Vector2(speed, rg.velocity.y);
         }
         // Move Left
-        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0)
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
             velocity = new Vector2(-speed, rg.velocity.y);
         }
@@ -39,8 +39,7 @@ public class PlayerMovement2 : MonoBehaviour
         }
 
         // Jump
-        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.JoystickButton0)) && IsGrounded())
-
+        if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
         {
             velocity = new Vector2(rg.velocity.x, jumpForce);
         }
