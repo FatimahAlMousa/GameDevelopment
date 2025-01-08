@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class SquareMovement : MonoBehaviour
+public class PlayerMovement2 : MonoBehaviour
 {
     public Rigidbody2D rg; // Rigidbody2D for physics-based movement
 
@@ -12,17 +14,22 @@ public class SquareMovement : MonoBehaviour
 
 
     Vector2 velocity;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
     {
         // Move Right
-        if (Input.GetKey(KeyCode.D) || Input.GetAxis("Horizontal") > 0)
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0)
         {
             velocity = new Vector2(speed, rg.velocity.y);
         }
         // Move Left
-        else if (Input.GetKey(KeyCode.A) || Input.GetAxis("Horizontal") < 0)
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0)
         {
             velocity = new Vector2(-speed, rg.velocity.y);
         }
@@ -32,7 +39,7 @@ public class SquareMovement : MonoBehaviour
         }
 
         // Jump
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0)) && IsGrounded())
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.JoystickButton0)) && IsGrounded())
 
         {
             velocity = new Vector2(rg.velocity.x, jumpForce);
