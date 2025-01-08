@@ -3,11 +3,15 @@ using UnityEngine;
 public class SquareMovement : MonoBehaviour
 {
     public Rigidbody2D rg; // Rigidbody2D for physics-based movement
+
+    public float speed = 1;
+
     public float jumpForce = 300f; // Adjust to control jump height
     public Transform groundCheck; // Empty GameObject to check ground
     public LayerMask groundLayer; // LayerMask to specify the ground layer
-    [SerializeField] int jump;
-    bool isGrounded;
+    
+
+    Vector2 velocity;
 
     // Update is called once per frame
     void Update()
@@ -15,20 +19,25 @@ public class SquareMovement : MonoBehaviour
         // Move Right
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += Vector3.right * 0.01f;
+            velocity = new Vector2(speed,rg.velocity.y);
         }
         // Move Left
         else if (Input.GetKey(KeyCode.A))
         {
-            transform.position += Vector3.left * 0.01f;
+            velocity = new Vector2(-speed,rg.velocity.y);
+        }
+        else
+        {
+            velocity = new Vector2(0, rg.velocity.y);
         }
 
         // Jump
-        isGrounded = Physics2D.OverlapCapsule(groundCheck.position,new Vector2(1.8f,0.3f),CapsuleDirection2D.Horizontal,0,groundLayer);
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rg.velocity = new Vector2(rg.velocity.x, jump);
+            velocity = new Vector2(rg.velocity.x, jumpForce);
         }
+
+        rg.velocity = velocity;
     }
 
     // Check if the object is on the ground
