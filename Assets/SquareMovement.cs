@@ -32,7 +32,7 @@ public class SquareMovement : MonoBehaviour
         }
 
         // Jump
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
         {
             velocity = new Vector2(rg.velocity.x, jumpForce);
         }
