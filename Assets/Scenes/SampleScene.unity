@@ -305,7 +305,11 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &402203903
+=======
+--- !u!1 &492403467
+>>>>>>> Stashed changes
 =======
 --- !u!1 &492403467
 >>>>>>> Stashed changes
@@ -317,6 +321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - component: {fileID: 402203908}
   - component: {fileID: 402203907}
   - component: {fileID: 402203906}
@@ -325,6 +330,8 @@ GameObject:
   m_Layer: 0
   m_Name: Square (2)
 =======
+=======
+>>>>>>> Stashed changes
   - component: {fileID: 492403469}
   - component: {fileID: 492403468}
   - component: {fileID: 492403472}
@@ -332,6 +339,9 @@ GameObject:
   - component: {fileID: 492403470}
   m_Layer: 0
   m_Name: S2
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,8 +349,11 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!114 &402203904
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!212 &492403468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -410,6 +423,9 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &492403470
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,7 +433,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 402203903}
+=======
+  m_GameObject: {fileID: 492403467}
+>>>>>>> Stashed changes
 =======
   m_GameObject: {fileID: 492403467}
 >>>>>>> Stashed changes
@@ -426,6 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849d3bde907a90245bc9e8d74edbe811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   rg: {fileID: 402203905}
   speed: 1
@@ -463,6 +484,8 @@ Rigidbody2D:
   m_Constraints: 0
 --- !u!61 &402203906
 =======
+=======
+>>>>>>> Stashed changes
   rg: {fileID: 492403472}
   speed: 1
   jumpForce: 300
@@ -471,6 +494,9 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 8
 --- !u!61 &492403471
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -478,7 +504,11 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 402203903}
+=======
+  m_GameObject: {fileID: 492403467}
+>>>>>>> Stashed changes
 =======
   m_GameObject: {fileID: 492403467}
 >>>>>>> Stashed changes
@@ -521,8 +551,14 @@ BoxCollider2D:
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!212 &402203907
 SpriteRenderer:
+=======
+--- !u!50 &492403472
+Rigidbody2D:
+  serializedVersion: 4
+>>>>>>> Stashed changes
 =======
 --- !u!50 &492403472
 Rigidbody2D:
@@ -532,6 +568,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_GameObject: {fileID: 402203903}
   m_Enabled: 1
@@ -596,6 +633,8 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 492403467}
   m_BodyType: 0
   m_Simulated: 1
@@ -616,6 +655,9 @@ Transform:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &519420028
 GameObject:
@@ -1068,7 +1110,11 @@ SceneRoots:
   - {fileID: 1300337194}
   - {fileID: 165231477}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 402203908}
+=======
+  - {fileID: 492403469}
+>>>>>>> Stashed changes
 =======
   - {fileID: 492403469}
 >>>>>>> Stashed changes
