@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject Player1;
-    public GameObject Player2;
+    public GameObject player1;
+    public GameObject player2;
     public float fallThreshold = -10f;
     public GameObject gameOverUI;
     public string[] levels;
@@ -19,16 +19,16 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Player1 != null && Player1.transform.position.y < fallThreshold)
+        if (player1 != null && player1.transform.position.y < fallThreshold)
         {
             GameOver("Player 1 fell!");
         }
-        else if (Player2 != null && Player2.transform.position.y < fallThreshold)
+        else if (player2 != null && player2.transform.position.y < fallThreshold)
         {
             GameOver("Player 2 fell!");
         }
 
-        if (Player1 == null || Player2 == null)
+        if (player1 == null || player2 == null)
         {
             GameOver("A player was lost!");
         }
