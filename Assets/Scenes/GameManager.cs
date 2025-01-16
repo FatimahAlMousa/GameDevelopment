@@ -8,30 +8,23 @@ public class GameManager : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
     public float fallThreshold = -10f;
-    public GameObject gameOverUI;
-    public string[] levels;
-    private int currentLevelIndex = 0;
 
     void Start()
     {
-        if (player1 == null || player2 == null || gameOverUI == null)
+        if (player1 == null || player2 == null)
         {
-            Debug.LogError("Missing required GameObjects in GameManager.");
+            Debug.LogError("One or more required GameObjects are not assigned in the GameManager.");
             return;
-        }
-
-        currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-
-        if (gameOverUI != null)
-        {
-            gameOverUI.SetActive(false);
         }
     }
 
     void Update()
     {
-        if ((player1 != null && player1.transform.position.y < fallThreshold) ||
-            (player2 != null && player2.transform.position.y < fallThreshold))
+        if (player1 != null && player1.transform.position.y < fallThreshold)
+        {
+            GameOver();
+        }
+        else if (player2 != null && player2.transform.position.y < fallThreshold)
         {
             GameOver();
         }
@@ -44,30 +37,13 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
-        if (gameOverUI != null)
-        {
-            gameOverUI.SetActive(true);
-        }
-        Time.timeScale = 0;
+        Debug.Log("Game Over!");
+        LoadGameOverScene();
     }
 
-    public void RestartLevel()
+    public void LoadGameOverScene()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void LoadNextLevel()
-    {
-        if (currentLevelIndex + 1 < levels.Length)
-        {
-            currentLevelIndex++;
-            Time.timeScale = 1;
-            SceneManager.LoadScene(levels[currentLevelIndex]);
-        }
-        else
-        {
-            Debug.Log("No more levels! Game Completed!");
-        }
+        Time.timeScale = 1; 
+        SceneManager.LoadScene("Lose"); 
     }
 }
