@@ -10,6 +10,7 @@ public class Player1 : MonoBehaviour
 
     public float jumpForce = 300f; // Adjust to control jump height
     public Transform groundCheck; // Empty GameObject to check ground
+    public Vector2 groundCheck_size;
     public LayerMask groundLayer; // LayerMask to specify the ground layer
 
 
@@ -52,7 +53,9 @@ public class Player1 : MonoBehaviour
     private bool IsGrounded()
     {
         // Check if the groundCheck object is touching the ground layer
-        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+        bool i = Physics2D.OverlapBox(groundCheck.position, groundCheck_size,1, groundLayer);
+        Debug.Log(i);
+        return i;
     }
 
     private void OnDrawGizmos()
@@ -61,7 +64,7 @@ public class Player1 : MonoBehaviour
         if (groundCheck != null)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(groundCheck.position, 0.1f);
+            Gizmos.DrawWireCube(groundCheck.position, groundCheck_size);
         }
     }
 }
