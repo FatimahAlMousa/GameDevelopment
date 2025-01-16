@@ -14,41 +14,47 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        if (player1 == null || player2 == null || gameOverUI == null)
+        {
+            Debug.LogError("Missing required GameObjects in GameManager.");
+            return;
+        }
+
         currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(false);
+        }
     }
 
     void Update()
     {
-        if (player1 != null && player1.transform.position.y < fallThreshold)
+        if ((player1 != null && player1.transform.position.y < fallThreshold) ||
+            (player2 != null && player2.transform.position.y < fallThreshold))
         {
-            GameOver("Player 1 fell!");
-        }
-        else if (player2 != null && player2.transform.position.y < fallThreshold)
-        {
-            GameOver("Player 2 fell!");
+            GameOver();
         }
 
         if (player1 == null || player2 == null)
         {
-            GameOver("A player was lost!");
+            GameOver();
         }
     }
 
-    void GameOver(string reason)
+    void GameOver()
     {
-        Debug.Log("Game Over! Reason: " + reason);
-
         if (gameOverUI != null)
         {
             gameOverUI.SetActive(true);
         }
-
         Time.timeScale = 0;
     }
 
-    public void LoadLevel(string levelName)
+    public void RestartLevel()
     {
-        SceneManager.LoadScene(levelName);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void LoadNextLevel()
@@ -56,16 +62,12 @@ public class GameManager : MonoBehaviour
         if (currentLevelIndex + 1 < levels.Length)
         {
             currentLevelIndex++;
+            Time.timeScale = 1;
             SceneManager.LoadScene(levels[currentLevelIndex]);
         }
         else
         {
             Debug.Log("No more levels! Game Completed!");
         }
-    }
-
-    public void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
