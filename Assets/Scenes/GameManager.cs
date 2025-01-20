@@ -46,4 +46,17 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1; 
         SceneManager.LoadScene("Lose"); 
     }
+
+    void Win()
+    {
+        Debug.Log("You Win!");
+        LoadWinScene();
+    }
+
+    public void LoadWinScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Win"); 
+    }
+
 }

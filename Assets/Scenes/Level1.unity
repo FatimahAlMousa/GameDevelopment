@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 74647542}
   - component: {fileID: 74647540}
   - component: {fileID: 74647543}
+  - component: {fileID: 74647544}
   m_Layer: 6
   m_Name: Dude_Monster
   m_TagString: Untagged
@@ -545,6 +546,27 @@ CapsuleCollider2D:
   m_Offset: {x: -0.005389659, y: -0.03143954}
   m_Size: {x: 0.1708866, y: 0.2571209}
   m_Direction: 0
+--- !u!95 &74647544
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74647537}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4fd6d0cf7f341cd479eff59741811e8d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &97305644
 GameObject:
   m_ObjectHideFlags: 0
@@ -8598,7 +8620,7 @@ Animator:
   m_GameObject: {fileID: 504073481}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e1a9517b06002d4fb92611c8ff79a83, type: 2}
+  m_Controller: {fileID: 9100000, guid: cc8f5bb8e03f1994c90630134e819d55, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
