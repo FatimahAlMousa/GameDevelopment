@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player1 : MonoBehaviour
 {
     public Rigidbody2D rg; // Rigidbody2D for physics-based movement
+    public Animator anim;
+    public SpriteRenderer SR;
 
     public float speed = 1;
 
@@ -28,16 +30,20 @@ public class Player1 : MonoBehaviour
         if (Input.GetKey(KeyCode.D) || Input.GetAxis("Joystick1_Horizontal") > 0)
         {
             velocity = new Vector2(speed, rg.velocity.y);
+            SR.flipX = false;
         }
         // Move Left
         else if (Input.GetKey(KeyCode.A) || Input.GetAxis("Joystick1_Horizontal") < 0)
         {
             velocity = new Vector2(-speed, rg.velocity.y);
+            SR.flipX = true;
         }
         else
         {
             velocity = new Vector2(0, rg.velocity.y);
         }
+
+        anim.SetFloat("move",Mathf.Abs(velocity.x));
 
         // Jump
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0)) && IsGrounded())
