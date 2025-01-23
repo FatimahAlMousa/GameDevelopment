@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public GameObject player2;
     public float fallThreshold = -10f;
 
+    private bool player1ReachedFence = false;
+    private bool player2ReachedFence = false;
+
     void Start()
     {
         if (player1 == null || player2 == null)
@@ -43,8 +46,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadGameOverScene()
     {
-        Time.timeScale = 1; 
-        SceneManager.LoadScene("Lose"); 
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Lose");
     }
 
     void Win()
@@ -56,7 +59,28 @@ public class GameManager : MonoBehaviour
     public void LoadWinScene()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Win"); 
+        SceneManager.LoadScene("Win");
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("fence"))
+        {
+            if (other.gameObject == player1)
+            {
+                player1ReachedFence = true;
+                Debug.Log("Player 1 reached the fence.");
+            }
+            else if (other.gameObject == player2)
+            {
+                player2ReachedFence = true;
+                Debug.Log("Player 2 reached the fence.");
+            }
+
+            if (player1ReachedFence && player2ReachedFence)
+            {
+                Win();
+            }
+        }
+    }
 }
