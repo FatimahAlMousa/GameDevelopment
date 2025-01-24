@@ -305,9 +305,9 @@ GameObject:
   - component: {fileID: 74647540}
   - component: {fileID: 74647543}
   - component: {fileID: 74647544}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Dude_Monster
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5184,7 +5184,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 154
-      m_TileSpriteIndex: 28
+      m_TileSpriteIndex: 109
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9327,8 +9327,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 3
     m_Data: {fileID: 178061735, guid: 509db398c4ed85f46979f122db0ad580, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1080736883, guid: 509db398c4ed85f46979f122db0ad580, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
@@ -9489,8 +9489,8 @@ Tilemap:
     m_Data: {fileID: -1172611525, guid: 509db398c4ed85f46979f122db0ad580, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1080736883, guid: 509db398c4ed85f46979f122db0ad580, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: -71582634, guid: 509db398c4ed85f46979f122db0ad580, type: 3}
   - m_RefCount: 14
@@ -10137,9 +10137,9 @@ GameObject:
   - component: {fileID: 504073484}
   - component: {fileID: 504073487}
   - component: {fileID: 504073488}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Pink_Monster
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28156,9 +28156,9 @@ GameObject:
   - component: {fileID: 1888432463}
   - component: {fileID: 1888432462}
   - component: {fileID: 1888432464}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence
-  m_TagString: Untagged
+  m_TagString: Fence
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
