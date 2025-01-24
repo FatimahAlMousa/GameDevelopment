@@ -389,9 +389,9 @@ GameObject:
   - component: {fileID: 74647540}
   - component: {fileID: 74647543}
   - component: {fileID: 74647544}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Dude_Monster
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8514,9 +8514,9 @@ GameObject:
   - component: {fileID: 504073484}
   - component: {fileID: 504073487}
   - component: {fileID: 504073488}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Pink_Monster
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9296,7 +9296,8 @@ GameObject:
   m_Component:
   - component: {fileID: 712606542}
   - component: {fileID: 712606543}
-  m_Layer: 0
+  - component: {fileID: 712606544}
+  m_Layer: 3
   m_Name: rocks1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9370,6 +9371,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &712606544
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712606541}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.071572304, y: -0.57257843}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8528309, y: 0.85081863}
+  m_EdgeRadius: 0
 --- !u!1 &790119374
 GameObject:
   m_ObjectHideFlags: 0
@@ -9380,7 +9426,8 @@ GameObject:
   m_Component:
   - component: {fileID: 790119375}
   - component: {fileID: 790119376}
-  m_Layer: 0
+  - component: {fileID: 790119377}
+  m_Layer: 3
   m_Name: rocks1_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9454,6 +9501,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &790119377
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790119374}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.42943382, y: -0.71572304}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.1411324, y: 0.85081863}
+  m_EdgeRadius: 0
 --- !u!1 &815366036
 GameObject:
   m_ObjectHideFlags: 0
@@ -27077,7 +27169,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1511713518}
   - component: {fileID: 1511713519}
-  m_Layer: 0
+  - component: {fileID: 1511713520}
+  m_Layer: 3
   m_Name: rocks1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27151,6 +27244,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1511713520
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511713517}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.0377984}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.92641544}
+  m_EdgeRadius: 0
 --- !u!1 &1610150648
 GameObject:
   m_ObjectHideFlags: 0
@@ -27629,7 +27767,7 @@ GameObject:
   - component: {fileID: 1888432463}
   - component: {fileID: 1888432462}
   - component: {fileID: 1888432464}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27715,7 +27853,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -27735,7 +27873,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.9779167, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -27746,7 +27884,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 5.9558334, y: 4}
   m_EdgeRadius: 0
 --- !u!1 &1891314404
 GameObject:
@@ -27759,7 +27897,7 @@ GameObject:
   - component: {fileID: 1891314405}
   - component: {fileID: 1891314406}
   - component: {fileID: 1891314407}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rocks1_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}

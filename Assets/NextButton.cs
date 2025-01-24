@@ -7,19 +7,18 @@ public class NextButton : MonoBehaviour
 {
     public void LoadNextLevel()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int nextSceneIndex = currentSceneIndex + 1;
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex; 
+        int nextSceneIndex = currentSceneIndex + 1; 
 
-        // Check if the next scene index is within the build settings
+        
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(nextSceneIndex); // Load the next scene
+            SceneManager.LoadScene(nextSceneIndex); 
         }
         else
         {
             Debug.Log("No more levels! Game Completed!");
-            
+           
         }
     }
-
 }

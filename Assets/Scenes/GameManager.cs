@@ -64,23 +64,28 @@ public class GameManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("fence"))
+        
+        if (other.CompareTag("Player"))
         {
+            
             if (other.gameObject == player1)
             {
                 player1ReachedFence = true;
                 Debug.Log("Player 1 reached the fence.");
             }
+            
             else if (other.gameObject == player2)
             {
                 player2ReachedFence = true;
                 Debug.Log("Player 2 reached the fence.");
             }
 
+            
             if (player1ReachedFence && player2ReachedFence)
             {
                 Win();
             }
         }
     }
+
 }
