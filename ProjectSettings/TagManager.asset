@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - Players
   - Fence
+  - Win
   layers:
   - Default
   - TransparentFX

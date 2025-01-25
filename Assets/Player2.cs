@@ -1,29 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player2 : MonoBehaviour
 {
-    public Rigidbody2D rg; // Rigidbody2D for physics-based movement
+    public Rigidbody2D rg; 
     public Animator anim;
     public SpriteRenderer SR;
+    public Text WINTEXT;
 
     public float speed = 1;
 
-    public float jumpForce = 300f; // Adjust to control jump height
-    public Transform groundCheck; // Empty GameObject to check ground
+    public float jumpForce = 300f; 
+    public Transform groundCheck; 
     public Vector2 groundCheck_size;
-    public LayerMask groundLayer; // LayerMask to specify the ground layer
+    public LayerMask groundLayer; 
     Vector2 velocity;
+    private bool winTriggered = false;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         // Move Right
@@ -55,10 +53,10 @@ public class Player2 : MonoBehaviour
         rg.velocity = velocity;
     }
 
-    // Check if the object is on the ground
+    
     private bool IsGrounded()
     {
-        // Check if the groundCheck object is touching the ground layer
+        
         bool i = Physics2D.OverlapBox(groundCheck.position, groundCheck_size, 1, groundLayer);
         Debug.Log(i);
         return i;
@@ -66,14 +64,30 @@ public class Player2 : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        // Visualize the ground check in the Scene view
+        
         if (groundCheck != null)
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(groundCheck.position, groundCheck_size);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Win") && !winTriggered)
+        {
+            winTriggered = true;
+            WINTEXT.gameObject.SetActive(true);
+            Invoke("LoadWinScene", 2f);
+        }
+    }
+
+    private void LoadWinScene()
+    {
+        SceneManager.LoadScene("Win");
+    }
+
 }
-        
-    
+
+
 
