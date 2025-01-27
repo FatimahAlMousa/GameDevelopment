@@ -9,7 +9,6 @@ public class Player2 : MonoBehaviour
     public Rigidbody2D rg; 
     public Animator anim;
     public SpriteRenderer SR;
-    public Text WINTEXT;
 
     public float speed = 1;
 
@@ -77,8 +76,7 @@ public class Player2 : MonoBehaviour
         if (collision.CompareTag("Win") && !winTriggered)
         {
             winTriggered = true;
-            WINTEXT.gameObject.SetActive(true);
-            Invoke("LoadWinScene", 2f);
+            LoadWinScene();
         }
     }
 
