@@ -6,16 +6,16 @@ using UnityEngine.UI;
 
 public class Player2 : MonoBehaviour
 {
-    public Rigidbody2D rg; 
+    public Rigidbody2D rg;
     public Animator anim;
     public SpriteRenderer SR;
 
     public float speed = 1;
 
-    public float jumpForce = 300f; 
-    public Transform groundCheck; 
+    public float jumpForce = 300f;
+    public Transform groundCheck;
     public Vector2 groundCheck_size;
-    public LayerMask groundLayer; 
+    public LayerMask groundLayer;
     Vector2 velocity;
     private bool winTriggered = false;
 
@@ -52,10 +52,10 @@ public class Player2 : MonoBehaviour
         rg.velocity = velocity;
     }
 
-    
+
     private bool IsGrounded()
     {
-        
+
         bool i = Physics2D.OverlapBox(groundCheck.position, groundCheck_size, 1, groundLayer);
         Debug.Log(i);
         return i;
@@ -63,7 +63,7 @@ public class Player2 : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        
+
         if (groundCheck != null)
         {
             Gizmos.color = Color.red;
@@ -73,18 +73,15 @@ public class Player2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Win") && !winTriggered)
+        if (collision.CompareTag("Win"))
         {
-            winTriggered = true;
-            LoadWinScene();
+            GameManager manager = FindObjectOfType<GameManager>();
+            if (manager != null)
+            {
+                manager.PlayerReachedWinArea(gameObject);
+            }
         }
     }
-
-    private void LoadWinScene()
-    {
-        SceneManager.LoadScene("Win");
-    }
-
 }
 
 
