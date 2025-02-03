@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
+using UnityEngine.EventSystems;
 
 public class Player1 : MonoBehaviour
 {
@@ -18,12 +20,12 @@ public class Player1 : MonoBehaviour
     private void Update()
     {
         // Move Right
-        if (Input.GetKey(KeyCode.D) || Input.GetAxis("Joystick1_Horizontal") > 0)
+        if (Input.GetKey(KeyCode.D) || Input.GetAxisRaw("Joystick1_Horizontal") > 0.5f)
         {
             velocity = new Vector2(speed, rg.velocity.y);
             SR.flipX = false;
         }
-        else if (Input.GetKey(KeyCode.A) || Input.GetAxis("Joystick1_Horizontal") < 0)
+        else if (Input.GetKey(KeyCode.A) || Input.GetAxisRaw("Joystick1_Horizontal") < -0.5f)
         {
             velocity = new Vector2(-speed, rg.velocity.y);
             SR.flipX = true;
@@ -36,7 +38,7 @@ public class Player1 : MonoBehaviour
         anim.SetFloat("move", Mathf.Abs(velocity.x));
 
         // Jump
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0)) && IsGrounded())
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Joystick1Button0)) && IsGrounded())
         {
             velocity = new Vector2(rg.velocity.x, jumpForce);
         }
