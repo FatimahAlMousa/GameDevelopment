@@ -18,12 +18,12 @@ public class Player1 : MonoBehaviour
     private void Update()
     {
         // Move Right
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetAxis("Joystick1_Horizontal") > 0)
         {
             velocity = new Vector2(speed, rg.velocity.y);
             SR.flipX = false;
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A) || Input.GetAxis("Joystick1_Horizontal") < 0)
         {
             velocity = new Vector2(-speed, rg.velocity.y);
             SR.flipX = true;
@@ -36,7 +36,7 @@ public class Player1 : MonoBehaviour
         anim.SetFloat("move", Mathf.Abs(velocity.x));
 
         // Jump
-        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0)) && IsGrounded())
         {
             velocity = new Vector2(rg.velocity.x, jumpForce);
         }
