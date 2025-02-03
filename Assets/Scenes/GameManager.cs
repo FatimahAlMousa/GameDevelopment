@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject win;
+    public GameObject lose;
+
     public GameObject player1;
     public GameObject player2;
     public float fallThreshold = -10f;
@@ -51,7 +54,7 @@ public class GameManager : MonoBehaviour
     public void LoadGameOverScene()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Lose");
+        lose.SetActive(true);
     }
 
     public void PlayerReachedWinArea(GameObject player)
@@ -83,6 +86,6 @@ public class GameManager : MonoBehaviour
     public void LoadWinScene()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Win");
+        win.SetActive(true);
     }
 }
