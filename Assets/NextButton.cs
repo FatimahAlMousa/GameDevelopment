@@ -18,7 +18,8 @@ public class NextButton : MonoBehaviour
         else
         {
             Debug.Log("No more levels! Game Completed!");
-           
+            SceneManager.LoadScene(0);
+
         }
     }
 }

@@ -395,8 +395,8 @@ MonoBehaviour:
   rg: {fileID: 74647542}
   anim: {fileID: 74647544}
   SR: {fileID: 74647538}
-  speed: 3
-  jumpForce: 15
+  speed: 5
+  jumpForce: 15.5
   groundCheck: {fileID: 1927434844}
   groundCheck_size: {x: 1.5, y: 0.35}
   groundLayer:
@@ -3868,7 +3868,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 264
-      m_TileSpriteIndex: 198
+      m_TileSpriteIndex: 200
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8691,12 +8691,12 @@ Tilemap:
     m_Data: {fileID: -656878846, guid: 509db398c4ed85f46979f122db0ad580, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -1134962629, guid: 509db398c4ed85f46979f122db0ad580, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 2059204807, guid: 509db398c4ed85f46979f122db0ad580, type: 3}
   - m_RefCount: 1
@@ -9559,8 +9559,8 @@ MonoBehaviour:
   rg: {fileID: 504073486}
   anim: {fileID: 504073488}
   SR: {fileID: 504073482}
-  speed: 3
-  jumpForce: 15
+  speed: 5
+  jumpForce: 15.5
   groundCheck: {fileID: 1502449635}
   groundCheck_size: {x: 1.5, y: 0.35}
   groundLayer:
