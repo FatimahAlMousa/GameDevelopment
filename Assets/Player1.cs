@@ -53,6 +53,7 @@ public class Player1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.CompareTag("Win"))
         {
             GameManager manager = FindObjectOfType<GameManager>();
@@ -61,5 +62,15 @@ public class Player1 : MonoBehaviour
                 manager.PlayerReachedWinArea(gameObject);
             }
         }
+        else if (collision.CompareTag("Hazard"))
+        {
+            GameManager manager = FindObjectOfType<GameManager>();
+            if (manager != null)
+            {
+                manager.GameOver(); // Trigger Game Over when hitting a hazard
+            }
+        }
     }
 }
+
+

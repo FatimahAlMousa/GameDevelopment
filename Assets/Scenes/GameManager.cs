@@ -38,14 +38,10 @@ public class GameManager : MonoBehaviour
         {
             GameOver();
         }
-
-        if (player1 == null || player2 == null)
-        {
-            GameOver();
-        }
     }
 
-    void GameOver()
+    // Make GameOver() public so other scripts can call it
+    public void GameOver()
     {
         Debug.Log("Game Over!");
         LoadGameOverScene();

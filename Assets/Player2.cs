@@ -81,6 +81,14 @@ public class Player2 : MonoBehaviour
                 manager.PlayerReachedWinArea(gameObject);
             }
         }
+        else if (collision.CompareTag("Hazard"))
+        {
+            GameManager manager = FindObjectOfType<GameManager>();
+            if (manager != null)
+            {
+                manager.GameOver(); // Trigger Game Over when hitting a hazard
+            }
+        }
     }
 }
 
